@@ -68,7 +68,7 @@ dependencies {
 
     // Compose
     implementation(Libs.compose_ui)
-    implementation(Libs.compose_material)
+    implementation(Libs.compose_material3)
     implementation(Libs.compose_ui_tooling)
     implementation(Libs.compose_icons)
     implementation(Libs.compose_icons_extended)

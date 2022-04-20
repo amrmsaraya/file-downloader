@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment">
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.main_activity.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Assignment">
+            android:theme="@style/Theme.Assignment.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

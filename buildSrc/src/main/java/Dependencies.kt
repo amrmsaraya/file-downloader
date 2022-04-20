@@ -4,7 +4,7 @@ object AndroidConfig {
 
     // Android SDK
     const val compileSdk = 32
-    const val minSdk = 21
+    const val minSdk = 23
     const val targetSdk = compileSdk
 
     // Compatibility
