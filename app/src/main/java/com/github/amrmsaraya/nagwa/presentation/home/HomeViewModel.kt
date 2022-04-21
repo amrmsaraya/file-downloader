@@ -49,8 +49,9 @@ class HomeViewModel @Inject constructor(
     }
 
     private fun getFiles(@RawRes resourceId: Int) = viewModelScope.launch(dispatcher) {
+        uiState = uiState.copy(isLoading = true)
         val files = getFilesUseCase(resourceId)
-        uiState = uiState.copy(files = files)
+        uiState = uiState.copy(files = files, isLoading = false)
     }
 
     private fun updateDownloadProgress(file: File, downloadProgress: Int) =

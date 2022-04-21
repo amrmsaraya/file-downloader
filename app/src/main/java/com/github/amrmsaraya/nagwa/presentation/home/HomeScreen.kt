@@ -29,17 +29,23 @@ fun HomeScreen(
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
-    LazyColumn(
-        modifier = modifier.padding(top = 8.dp, start = 16.dp, end = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        items(uiState.files) { file ->
-            FileCard(name = file.name, status = file.getStatus(context)) {
-                if (!uiState.isDownloading) {
-                    val id = context.download(file)
-                    scope.launch {
-                        context.getDownloadProgress(id) {
-                            viewModel.sendIntent(HomeIntent.UpdateDownloadProgress(file, it))
+    if (uiState.isLoading) {
+        Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            CircularProgressIndicator()
+        }
+    } else {
+        LazyColumn(
+            modifier = modifier.padding(top = 8.dp, start = 16.dp, end = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            items(uiState.files) { file ->
+                FileCard(name = file.name, status = file.getStatus(context)) {
+                    if (!uiState.isDownloading) {
+                        val id = context.download(file)
+                        scope.launch {
+                            context.getDownloadProgress(id) {
+                                viewModel.sendIntent(HomeIntent.UpdateDownloadProgress(file, it))
+                            }
                         }
                     }
                 }
