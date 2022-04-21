@@ -89,8 +89,6 @@ dependencies {
     debugImplementation(AndroidTestLibs.debug_compose_ui)
     androidTestImplementation(AndroidTestLibs.arch_core)
     androidTestImplementation(TestLibs.coroutines)
-    androidTestImplementation(TestLibs.mockk)
-    androidTestImplementation(TestLibs.mockk_jvm)
 
     // Splash Screen
     implementation(Libs.splashscreen)
