@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/amrmsaraya/nagwa-assignment/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
+  <img src="https://raw.githubusercontent.com/amrmsaraya/file-downloader/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
 </p>
 
 # Nagwa Android Assignment - File Downloader
