@@ -28,11 +28,8 @@
 
 - [Clean Architecture](https://koenig-media.raywenderlich.com/uploads/2019/02/Clean-Architecture-Bob-650x454.png)
 	- Application architecture pattern
-		- :app module - Presentation layer that contains UI related code and dependency injection
-		- :data module - Data layer that contains DTOs, Mapper, Data sources and Repository
-		  Implementation
-		- :domain module - Business layer that contains Use Cases, Repository interfaces and
-		  Models (
-		  Entities)
+		- Presentation layer - Contains UI related code and dependency injection
+		- Data layer - Contains DTOs, Mapper, Data sources and Repository Implementation
+		- Domain layer - Contains Use Cases, Repository interfaces and Models (Entities)
 - [MVI](https://miro.medium.com/max/5152/1*iFis87B9sIfpsgQeFkgu8Q.png) - Model-View-Intent design
   pattern
